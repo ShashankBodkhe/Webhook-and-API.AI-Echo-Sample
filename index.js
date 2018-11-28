@@ -14,12 +14,11 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+  if (req.body.result.parameters.echoText != null
+    && req.body.result.parameters.echoText)
+  { 
+  var speech = req.body.result.parameters.echoText
+  }
   return res.json({
     speech: speech,
     displayText: speech,
@@ -28,10 +27,12 @@ restService.post("/echo", function(req, res) {
 });
 
 
+
+
 restService.post("/echo", function (req, res) {
   if (req.body.result.parameters.multiple != null
     && req.body.result.parameters.multiple)
-    var speech = "Yes, you can add multiple bank accounts to user to make payment on your account!!"
+    {var speech = "Yes, you can add multiple bank accounts to user to make payment on your account!!"}
 
 
   return res.json({
