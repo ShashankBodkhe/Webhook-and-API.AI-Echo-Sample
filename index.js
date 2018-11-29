@@ -17,12 +17,12 @@ restService.post("/echo", function(req, res) {
   // if (req.body.queryResult.parameters.echoText != null
   //  && req.body.queryResult.parameters.echoText)
   //{ 
-  var speech = req.body;
+ // var speech = req.body;
  // }
  // else 
  // var speech= "else condition";
   return res.json({
-    fulfillmentText: speech,
+    fulfillmentText: "Hello !!!! :)",
     fulfillmentMessages: [
       {
         "text": [
