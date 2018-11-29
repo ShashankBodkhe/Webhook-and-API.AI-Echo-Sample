@@ -19,6 +19,7 @@ restService.post("/echo", function(req, res) {
   { 
   var speech = req.body.result.parameters.echoText
   }
+  else speech= "change";
   return res.json(
   {
     fulfillmentText: speech,
