@@ -23,11 +23,11 @@ restService.post("/echo", function(req, res) {
   var speech= req.body.queryResult.parameters.echoText;
   return res.json({
     fulfillmentText: "fulfillmentText",
-   fulfillmentMessages: [{"simpleResponses": {"simpleResponses": [   {
-      "textToSpeech": "response text",
-      "displayText": speech
+   fulfillmentMessages: [{Responses: {Responses: [   {
+      textToSpeech: "textToSpeech",
+      displayText: speech
    }]}}],
-    source: "webhook-echo-sample"
+    source: "webhook-sample"
   });
 });
 
