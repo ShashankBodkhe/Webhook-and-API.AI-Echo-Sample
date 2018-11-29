@@ -14,18 +14,18 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  // if (req.body.queryResult.parameters.echoText != null
-  //  && req.body.queryResult.parameters.echoText)
-  //{ 
- // var speech = req.body;
- // }
- // else 
- // var speech= "else condition";
+//    if (req.body.queryResult.parameters.echoText != null
+//     && req.body.queryResult.parameters.echoText)
+//   { 
+//   var speech = req.body;
+//   }
+//   else 
+  var speech= req.body.queryResult.parameters.echoText;
   return res.json({
-    fulfillmentText: "Hello !!!! :)",
+    fulfillmentText: "fulfillmentText",
    fulfillmentMessages: [{"simpleResponses": {"simpleResponses": [   {
       "textToSpeech": "response text",
-      "displayText": "Hello !!!! :)"
+      "displayText": speech
    }]}}],
     source: "webhook-echo-sample"
   });
