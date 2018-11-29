@@ -23,13 +23,10 @@ restService.post("/echo", function(req, res) {
  // var speech= "else condition";
   return res.json({
     fulfillmentText: "Hello !!!! :)",
-    fulfillmentMessages: [
-      {
-        "text": [
-          "text response"
-        ],
-      }
-    ],
+   fulfillmentMessages: [{"simpleResponses": {"simpleResponses": [   {
+      "textToSpeech": "response text",
+      "displayText": "response text"
+   }]}}],
     source: "webhook-echo-sample"
   });
 });
