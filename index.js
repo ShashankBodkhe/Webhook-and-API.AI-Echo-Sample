@@ -14,12 +14,12 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  if (req.body.queryResult.parameters.echoText != null
-    && req.body.queryResult.parameters.echoText)
-  { 
-  var speech = req.body.result.queryResult.echoText
-  }
-  else 
+//   if (req.body.queryResult.parameters.echoText != null
+//     && req.body.queryResult.parameters.echoText)
+//   { 
+//   var speech = req.body.result.queryResult.echoText
+//   }
+//   else 
   var speech= "else condition";
   return res.json({
     fulfillmentText: speech,
