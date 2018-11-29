@@ -14,28 +14,16 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-//  if (req.body.result.parameters.echoText != null
-//     && req.body.result.parameters.echoText)
-//   { 
-//   var speech = req.body.result.parameters.echoText
-//   }
-//   else 
-  speech= "change";
-  return res.json(
-  {
-    fulfillmentText: speech,
-    fulfillmentMessages:
-     [
-    {
-      text: [
-        speech
-      ],
-    }
-     ],
-    source: "example.com"
+  if (req.body.queryResult.parameters.echoText != null
+    && req.body.queryResult.parameters.echoText)
+  { 
+  var speech = req.body.result.queryResult.echoText
   }
-  
-  );
+  return res.json({
+    fulfillmentText: speech,
+    
+    source: "webhook-echo-sample"
+  });
 });
 
 
