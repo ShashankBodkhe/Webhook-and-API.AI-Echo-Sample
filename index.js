@@ -25,7 +25,7 @@ restService.post("/echo", function(req, res) {
     fulfillmentText: "Hello !!!! :)",
    fulfillmentMessages: [{"simpleResponses": {"simpleResponses": [   {
       "textToSpeech": "response text",
-      "displayText": "response text"
+      "displayText": "Hello !!!! :)"
    }]}}],
     source: "webhook-echo-sample"
   });
