@@ -17,15 +17,21 @@ restService.post("/echo", function(req, res) {
   if (req.body.queryResult.parameters.echoText != null
     && req.body.queryResult.parameters.echoText)
   { 
-  var speech = req.body.queryResult.parameters.echoText
+  var speech = req.body.result.queryResult.echoText
   }
+  else speech= "else condition";
   return res.json({
     fulfillmentText: speech,
-    
+    fulfillmentMessages: [
+      {
+        "text": [
+          "text response"
+        ],
+      }
+    ],
     source: "webhook-echo-sample"
   });
 });
-
 
 
 restService.post("/audio", function(req, res) {
