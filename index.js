@@ -27,7 +27,7 @@ restService.post("/echo", function(req, res) {
       "textToSpeech": "textToSpeech",
       "displayText": speech
    }]}}],
-    source: "webhook-echo-sample"
+    source: "webhook-sample"
   });
 });
 
