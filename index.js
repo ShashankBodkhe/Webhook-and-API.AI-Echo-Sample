@@ -19,7 +19,7 @@ restService.post("/echo", function(req, res) {
   { 
   var speech = req.body.queryResult.parameters.echoText;
   }
- else  if (req.body.queryResult.parameters.account_information != null
+ else  if (req.body.queryResult.parameters.account_information == "contact number" 
     && req.body.queryResult.parameters.account_information)
   { 
   var speech = "9730973085";
