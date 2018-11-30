@@ -24,6 +24,21 @@ restService.post("/echo", function(req, res) {
   { 
   var speech = "9730973085";
   }
+  else  if (req.body.queryResult.parameters.account_information == "account number" 
+  && req.body.queryResult.parameters.account_information)
+{ 
+var speech = "01029837465628";
+}
+else  if (req.body.queryResult.parameters.account_information == "DOB" 
+&& req.body.queryResult.parameters.account_information)
+{ 
+var speech = "1 Jan 2019";
+}
+else  if (req.body.queryResult.parameters.account_information == "address" 
+&& req.body.queryResult.parameters.account_information)
+{ 
+var speech = " floor no 1 , Building no 1 , Barclays";
+}
  
  // var speech= req.body.queryResult.parameters.echoText;
   return res.json({
