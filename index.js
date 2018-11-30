@@ -14,13 +14,18 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-//    if (req.body.queryResult.parameters.echoText != null
-//     && req.body.queryResult.parameters.echoText)
-//   { 
-//   var speech = req.body;
-//   }
-//   else 
-  var speech= req.body.queryResult.parameters.echoText;
+   if (req.body.queryResult.parameters.echoText != null
+    && req.body.queryResult.parameters.echoText)
+  { 
+  var speech = req.body.queryResult.parameters.echoText;
+  }
+ else  if (req.body.queryResult.parameters.account_information != null
+    && req.body.queryResult.parameters.account_information)
+  { 
+  var speech = "9730973085";
+  }
+ 
+ // var speech= req.body.queryResult.parameters.echoText;
   return res.json({
     fulfillmentText: "fulfillmentText",
    fulfillmentMessages: [{simpleResponses: {simpleResponses: [   {
