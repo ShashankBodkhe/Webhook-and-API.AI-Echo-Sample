@@ -22,12 +22,12 @@ restService.post("/echo", function(req, res) {
  else  if (req.body.queryResult.parameters.account_information == "contact number" 
     && req.body.queryResult.parameters.account_information)
   { 
-  var speech = "9730973085";
+  var speech = "9999999999";
   }
   else  if (req.body.queryResult.parameters.account_information == "account number" 
   && req.body.queryResult.parameters.account_information)
 { 
-var speech = "01029837465628";
+var speech = "99999999999999";
 }
 else  if (req.body.queryResult.parameters.account_information == "DOB" 
 && req.body.queryResult.parameters.account_information)
@@ -37,7 +37,7 @@ var speech = "1 Jan 2019";
 else  if (req.body.queryResult.parameters.account_information == "address" 
 && req.body.queryResult.parameters.account_information)
 { 
-var speech = " floor no 1 , Building no 1 , Barclays";
+var speech = " floor no 1 , Building no 1 , address";
 }
  
  // var speech= req.body.queryResult.parameters.echoText;
